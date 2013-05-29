@@ -3,17 +3,17 @@
 # Author: Shuvankar Sarkar
 # Date: 29 May 2013
 
-echo 'Creating directory...'
-
 #Find systemdate. e.g. 2952013. To discard 0 from month -m is used.
 currdate=$(date +"%d%-m%Y")
 
-echo 'Downlod starting...'
+echo 'Creating directory...'
 #Creating directory. Downloaded files will be stored here.
 mkdir $currdate
 
 count=1
 str=''
+
+echo 'Downlod starting...'
 while [ $count -lt 14 ]
 do
 	# -c is used to resume(continue) downloding if network failed. -P is for saving the files to particular destination.
