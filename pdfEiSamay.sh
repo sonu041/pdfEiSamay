@@ -14,13 +14,13 @@ count=1
 str=''
 
 echo 'Downlod starting...'
-while [ $count -lt 14 ]
+while [ $count -lt 15 ]
 do
 	# -c is used to resume(continue) downloding if network failed. -P is for saving the files to particular destination.
 	wget -c http://www.epaper.eisamay.com/epaperpdf/$currdate/$currdate-md-em-$count.pdf -P ./$currdate
 
 	#BUG:fixed. Collect the file name. It is used to pass parameter while joining pdf. I used wild char *pdf which joined the pages alphabetically (e.g. page1 then page10)
-	 str=$str' '$currdate-md-em-$count.pdf
+	 str=$str' './$currdate/$currdate-md-em-$count.pdf
 
    count=`expr $count + 1`	 
 done
