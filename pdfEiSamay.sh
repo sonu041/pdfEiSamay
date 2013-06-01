@@ -4,7 +4,7 @@
 # Date: 29 May 2013
 
 #Find systemdate. e.g. 2952013. To discard 0 from month -m is used.
-currdate=$(date +"%d%-m%Y")
+currdate=$(date +"%-d%-m%Y")
 
 echo 'Creating directory...'
 #Creating directory. Downloaded files will be stored here.
